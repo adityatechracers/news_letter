@@ -1,0 +1,13 @@
+<% provide(:title, 'All Tags') %>
+<% if current_user.admin? %>
+<center><h3><%= link_to "Add New Tag", new_tag_path %></h3></center>
+<% end %>
+<h1>All Tag</h1>
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @tags %>
+</ul>
+
+<%= will_paginate %>
+

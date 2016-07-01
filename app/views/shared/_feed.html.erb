@@ -1,0 +1,11 @@
+<% @tags.each do |tag| %>
+   <% @posts = tag.posts.reverse %>
+      <% @posts.each do |post| %>
+          <h3>Subject : <%= post.subject %></h3>
+             Description : <%= post.description %>
+       <% end %>
+<% end %>
+
+
+  
+  
