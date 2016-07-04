@@ -2,8 +2,8 @@ class StaticPagesController < ApplicationController
 
   def home
     if logged_in? 
-      @tags = current_user.tags
-    end
+      @post_items = current_user.tags_posts.reverse      
+     end
   end
 
   def about

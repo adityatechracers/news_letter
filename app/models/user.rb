@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	has_many :subscriptions
   has_many :tags, through: :subscriptions
+  has_many :tags_posts, :through =>:tags, :source =>:posts
 
   validates :name,  presence: true, length: { minimum: 4, maximum: 30 }, uniqueness: { case_sensitive: false }
   

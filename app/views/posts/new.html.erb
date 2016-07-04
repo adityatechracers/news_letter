@@ -10,7 +10,7 @@
       <%= f.text_field :subject, class: 'form-control' %>
       
       <%= f.label :description %>
-      <%= f.text_field :description, class: 'form-control' %>
+      <%= f.text_area :description, class: 'form-control' %>
 
       <%= fields_for(@post_tag) do |ab| %>
       <%= ab.label 'All tag' %>
